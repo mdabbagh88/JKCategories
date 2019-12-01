@@ -173,7 +173,7 @@ NSString const *jk_UIBarButtonItem_badgeValueKey = @"jk_UIBarButtonItem_badgeVal
 -(NSString *)jk_badgeValue {
     return objc_getAssociatedObject(self, &jk_UIBarButtonItem_badgeValueKey);
 }
--(void)setJk_vadgeValue:(NSString *)badgeValue
+-(void)setJk_badgeValue:(NSString *)badgeValue
 {
     objc_setAssociatedObject(self, &jk_UIBarButtonItem_badgeValueKey, badgeValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
@@ -183,10 +183,10 @@ NSString const *jk_UIBarButtonItem_badgeValueKey = @"jk_UIBarButtonItem_badgeVal
 }
 
 // Badge background color
--(UIColor *)badgeBGColor {
+-(UIColor *)jk_badgeBGColor {
     return objc_getAssociatedObject(self, &jk_UIBarButtonItem_badgeBGColorKey);
 }
--(void)setBadgeBGColor:(UIColor *)badgeBGColor
+-(void)setJk_badgeBGColor:(UIColor *)badgeBGColor
 {
     objc_setAssociatedObject(self, &jk_UIBarButtonItem_badgeBGColorKey, badgeBGColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (self.jk_badge) {
@@ -195,10 +195,10 @@ NSString const *jk_UIBarButtonItem_badgeValueKey = @"jk_UIBarButtonItem_badgeVal
 }
 
 // Badge text color
--(UIColor *)badgeTextColor {
+-(UIColor *)jk_badgeTextColor {
     return objc_getAssociatedObject(self, &jk_UIBarButtonItem_badgeTextColorKey);
 }
--(void)setBadgeTextColor:(UIColor *)badgeTextColor
+-(void)setJk_badgeTextColor:(UIColor *)badgeTextColor
 {
     objc_setAssociatedObject(self, &jk_UIBarButtonItem_badgeTextColorKey, badgeTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (self.jk_badge) {
@@ -207,10 +207,10 @@ NSString const *jk_UIBarButtonItem_badgeValueKey = @"jk_UIBarButtonItem_badgeVal
 }
 
 // Badge font
--(UIFont *)badgeFont {
+-(UIFont *)jk_badgeFont {
     return objc_getAssociatedObject(self, &jk_UIBarButtonItem_badgeFontKey);
 }
--(void)setBadgeFont:(UIFont *)badgeFont
+-(void)setJk_badgeFont:(UIFont *)badgeFont
 {
     objc_setAssociatedObject(self, &jk_UIBarButtonItem_badgeFontKey, badgeFont, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (self.jk_badge) {
@@ -219,11 +219,11 @@ NSString const *jk_UIBarButtonItem_badgeValueKey = @"jk_UIBarButtonItem_badgeVal
 }
 
 // Padding value for the badge
--(CGFloat) badgePadding {
+-(CGFloat)jk_badgePadding {
     NSNumber *number = objc_getAssociatedObject(self, &jk_UIBarButtonItem_badgePaddingKey);
     return number.floatValue;
 }
--(void) setBadgePadding:(CGFloat)badgePadding
+-(void)setJk_badgePadding:(CGFloat)badgePadding
 {
     NSNumber *number = [NSNumber numberWithDouble:badgePadding];
     objc_setAssociatedObject(self, &jk_UIBarButtonItem_badgePaddingKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -237,7 +237,7 @@ NSString const *jk_UIBarButtonItem_badgeValueKey = @"jk_UIBarButtonItem_badgeVal
     NSNumber *number = objc_getAssociatedObject(self, &jk_UIBarButtonItem_badgeMinSizeKey);
     return number.floatValue;
 }
--(void) setJk_badgeMinSize:(CGFloat)badgeMinSize
+-(void)setJk_badgeMinSize:(CGFloat)badgeMinSize
 {
     NSNumber *number = [NSNumber numberWithDouble:badgeMinSize];
     objc_setAssociatedObject(self, &jk_UIBarButtonItem_badgeMinSizeKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -251,7 +251,7 @@ NSString const *jk_UIBarButtonItem_badgeValueKey = @"jk_UIBarButtonItem_badgeVal
     NSNumber *number = objc_getAssociatedObject(self, &jk_UIBarButtonItem_badgeOriginXKey);
     return number.floatValue;
 }
--(void) setJk_badgeOriginX:(CGFloat)badgeOriginX
+-(void)setJk_badgeOriginX:(CGFloat)badgeOriginX
 {
     NSNumber *number = [NSNumber numberWithDouble:badgeOriginX];
     objc_setAssociatedObject(self, &jk_UIBarButtonItem_badgeOriginXKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -264,7 +264,7 @@ NSString const *jk_UIBarButtonItem_badgeValueKey = @"jk_UIBarButtonItem_badgeVal
     NSNumber *number = objc_getAssociatedObject(self, &jk_UIBarButtonItem_badgeOriginYKey);
     return number.floatValue;
 }
--(void) setJk_badgeOriginY:(CGFloat)badgeOriginY
+-(void)setJk_badgeOriginY:(CGFloat)badgeOriginY
 {
     NSNumber *number = [NSNumber numberWithDouble:badgeOriginY];
     objc_setAssociatedObject(self, &jk_UIBarButtonItem_badgeOriginYKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -274,11 +274,11 @@ NSString const *jk_UIBarButtonItem_badgeValueKey = @"jk_UIBarButtonItem_badgeVal
 }
 
 // In case of numbers, remove the badge when reaching zero
--(BOOL) shouldHideBadgeAtZero {
+-(BOOL)jk_shouldHideBadgeAtZero {
     NSNumber *number = objc_getAssociatedObject(self, &jk_UIBarButtonItem_shouldHideBadgeAtZeroKey);
     return number.boolValue;
 }
-- (void)setShouldHideBadgeAtZero:(BOOL)shouldHideBadgeAtZero
+- (void)setJk_shouldHideBadgeAtZero:(BOOL)shouldHideBadgeAtZero
 {
     NSNumber *number = [NSNumber numberWithBool:shouldHideBadgeAtZero];
     objc_setAssociatedObject(self, &jk_UIBarButtonItem_shouldHideBadgeAtZeroKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
